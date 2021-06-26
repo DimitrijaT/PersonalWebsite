@@ -161,3 +161,11 @@ aside > i{
 .smallHeaderIntro{
     font-size: 0.8em;
 }
+
+iframe{
+   pointer-events: none;
+    user-select: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
