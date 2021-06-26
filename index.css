@@ -14,7 +14,13 @@ body{
 "footer";
 
 }
+
+html {
+    overflow-y: scroll;
+}
+
 *{
+
     box-sizing: border-box;
 }
 
@@ -24,16 +30,23 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-image: linear-gradient(rgba(255, 255, 255, 1),rgba(255, 255, 255, 1),rgba(255, 255, 255, 1),rgba(255, 255, 255, 1), rgba(255, 131, 0, 0.2));
+    background-image: linear-gradient(rgba(255, 255, 255, 1),rgba(255, 255, 255, 1),rgba(255, 255, 255, 1),rgba(255, 255, 255, 1), rgba(255, 131, 0, 0.3));
     flex-wrap: wrap;
     box-shadow: 0 2px #FF8300;
     z-index: 999;
-
 }
-nav > a{
+Header h1:hover{
+
+    text-shadow: 2px 2px 3px #FF8300;
     color: black;
-    padding: 3%;
-    margin: 3%;
+}
+
+
+nav > a{
+    border: solid 2px lightgray;
+    color: black;
+    padding: 1%;
+    margin: 1%;
     border-radius: 20px;
 }
 nav > a:hover{
@@ -45,6 +58,7 @@ nav > a:hover{
 
 
 a {
+
     text-decoration: none;
     color: black;
 }
@@ -56,10 +70,14 @@ section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
 
 }
 figcaption{
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    padding: 2%;
+    border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -76,6 +94,7 @@ figcaption button{
 figure{
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 0;
 }
 figure > img{
@@ -84,10 +103,18 @@ figure > img{
 }
 
 article{
+    flex-grow: 1;
     font-family: 'Open Sans', sans-serif;
     margin: 3%;
     flex-basis: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+
+
+
 #MainArticle{
     margin: 0;
     background: whitesmoke url("Images/Background.png") fixed no-repeat ;
@@ -107,17 +134,24 @@ footer{
     box-shadow: 0 -2px #FF8300;
     grid-area: footer;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
 nav{
+    flex-basis: 500px;
     display: flex;
-    flex-basis: 300px;
+    justify-content: center;
+    align-items: center;
+
+
 }
 
 #Selected{
     color: #FF8300;
     border: solid 2px #FF8300;
-
 }
 
 h1,h2{
@@ -168,4 +202,22 @@ iframe{
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.ProjectShowcase{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    background-color: #7d7d7d;
+    border-radius: 20px;
+}
+#GalaxyInvaders{
+    background: url("Images/GalaxyInvaders.png") no-repeat space ;
+}
+.ProjectShowcase:hover{
+    box-shadow: 0 10px 2px #FF8300 ;
 }
