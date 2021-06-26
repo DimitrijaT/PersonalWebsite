@@ -63,13 +63,20 @@ figcaption{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-evenly;
 }
+figcaption a,h1,button{
+    margin: 0;
+}
+figcaption button{
+    margin-top: 3%;
+}
+
 figure{
     display: flex;
     align-items: center;
     margin: 0;
-
 }
 
 article{
@@ -117,11 +124,25 @@ aside{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-basis: 400px;
+
 }
 
 aside > i{
     color: #FF8300;
+    padding-right: 2%;;
 }
+
+.alignIcon{
+    display: flex;
+    align-items: center;
+}
+.alignIcon > i{
+    color: #FF8300;
+    padding-right: 2%;
+}
+
+
 
 #HireMe{
     background-color: #FF8300;
