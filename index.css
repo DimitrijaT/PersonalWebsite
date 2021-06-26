@@ -79,13 +79,14 @@ figure{
     margin: 0;
 }
 figure > img{
+    min-width: 250px;
     width: 30%;
 }
 
 article{
     font-family: 'Open Sans', sans-serif;
     margin: 3%;
-    flex-basis: 300px;
+    flex-basis: 200px;
 }
 #MainArticle{
     margin: 0;
