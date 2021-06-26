@@ -78,6 +78,9 @@ figure{
     align-items: center;
     margin: 0;
 }
+figure > img{
+    width: 30%;
+}
 
 article{
     font-family: 'Open Sans', sans-serif;
