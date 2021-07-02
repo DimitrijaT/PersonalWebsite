@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="mk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Контакт</title>
+    <title>Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="../Images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans&display=swap" rel="stylesheet">
@@ -14,8 +14,7 @@
           rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="socialMedia.css">
-
+    <link rel="stylesheet" href="../socialMedia.css">
 
 
 </head>
@@ -27,22 +26,22 @@
         <i class="material-icons">
             account_circle
         </i>
-        <h1>Димитрија Тимески</h1>
+        <h1>Dimitrija Timeski</h1>
     </aside>
 
 
     <nav>
 
-        <a href="index.html" >Почетна</a>
-        <a href="aboutMe.html">Биографија</a>
-        <a href="projects.html">Проекти</a>
-        <a href="contact.html" id="Selected">Контакт</a>
-        <a href="en/contact_en.html" class="languageSwap">
+        <a href="index_en.html">Home</a>
+        <a href="aboutMe_en.html">Biography</a>
+        <a href="projects_en.html">Projects</a>
+        <a href="contact_en.html" id="Selected" >Contact</a>
+        <a href="../contact.html" class="languageSwap">
             <i class="material-icons">
                 language
             </i>
-            English</a>
-
+           Македонски
+        </a>
 
     </nav>
 
@@ -57,7 +56,7 @@
 
 
 <article id="MainTitle">
-    <h1 class="blurBackground">Контакт</h1>
+    <h1 class="blurBackground">Contact</h1>
 </article>
 
 
@@ -69,22 +68,22 @@
 
                 <div class="LeftForm">
             <label>
-                <span class="labelWidth"  >Име*</span>
-                <input type="text" required placeholder="Вашето име...">
+                <span class="labelWidth"  >Name*</span>
+                <input type="text" required placeholder="Your name...">
             </label>
 
             <label>
-                <span class="labelWidth" >Презиме</span>
-                <input type="text" placeholder="Вашето презиме...">
+                <span class="labelWidth" >Surname</span>
+                <input type="text" placeholder="Your surname...">
             </label>
 
             <label>
-                <span class="labelWidth">E-пошта*</span>
-                <input type="text" required placeholder="Вашата е-пошта...">
+                <span class="labelWidth">E-mail*</span>
+                <input type="text" required placeholder="Your email...">
             </label>
 
             <label>
-                <span class="labelWidth">Држава</span>
+                <span class="labelWidth">Country</span>
 
             <select name="countryFrom" id="countryFrom">
                 <option value="blank">/</option>
@@ -340,28 +339,29 @@
 
 
                 <label>
-                    <span class="labelWidth">Пол</span>
+                    <span class="labelWidth">Gender</span>
 
-                    <label><input type="radio" value="Male" name="Gender" id="Male">Машки</label>
-                    <label><input type="radio" value="Female" name="Gender" id="Female">Женски</label>
+                    <label><input type="radio" value="Male" name="Gender" id="Male">Male</label>
+                    <label><input type="radio" value="Female" name="Gender" id="Female">Female</label>
                 </label>
 
                 </div>
 
                 <div class="RightForm">
-                <label><span class="labelWidth">Опис</span>
-                         <textarea name="complains" placeholder="Напишете нешто.."></textarea>
+                <label><span class="labelWidth">Description</span>
+                         <textarea name="complains" placeholder="Write something.."></textarea>
                 </label>
 
                 </div>
 
-            <input type="submit" value="Испрати" onclick="playSound()">
+            <input type="submit" value="Submit" onclick="playSound()">
         </form>
 
 
 
 
     <article class="SocialMedia">
+
         <a href="https://github.com/DimitrijaT" class="fa fa-github"></a>
         <a href="https://stackoverflow.com/users/14632319/dimitrija-t" class="fa fa-stack-overflow"></a>
         <a href="https://www.linkedin.com/in/%D0%B4%D0%B8%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D1%98%D0%B0-%D1%82%D0%B8%D0%BC%D0%B5%D1%81%D0%BA%D0%B8-9a48791b9/" class="fa fa-linkedin"></a>
@@ -381,13 +381,13 @@
 
 
 <footer>
-    <p>Димитрија Тимески &copy;ФИНКИ 2021</p>    <a href="#" onclick="playSound()"> <i class="material-icons">
+    <p>Dimitrija Timeski &copy;FINKI 2021</p>   <a href="#" onclick="playSound()"> <i class="material-icons">
     expand_less
 </i></a>
 </footer>
 
 
-<script src="JS.js"></script>
+<script src="../JS.js"></script>
 
 <!--
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

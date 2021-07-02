@@ -35,24 +35,27 @@ header{
     box-shadow: 0 2px #FF8300;
     z-index: 999;
 }
-Header h1:hover{
+header h1{
+    transition: 250ms ease-in;
+}
 
+
+header h1:hover{
     text-shadow: 2px 2px 3px #FF8300;
     color: black;
 }
 
 
-nav > a{
+nav > a:not(.languageSwap){
     border: solid 2px lightgray;
     color: black;
     padding: 1%;
     margin: 1%;
     border-radius: 20px;
+    transition: 250ms ease-in;
 }
-nav > a:hover{
-
+nav > a:not(.languageSwap):hover{
     background-color: whitesmoke;
-    transition: 2ms;
 
 }
 
@@ -106,10 +109,10 @@ article{
     flex-grow: 1;
     font-family: 'Open Sans', sans-serif;
     margin: 3%;
-    flex-basis: 200px;
+    flex-basis: 300px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 
@@ -164,22 +167,41 @@ aside{
     justify-content: center;
     align-items: center;
     flex-basis: 400px;
+    user-select: none;
 
 }
+
+.languageSwap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 400px;
+    user-select: none;
+    padding-right: 5px;
+
+}
+.languageSwap > i{
+    color: #FF8300;
+}
+
 
 aside > i{
     color: #FF8300;
-    padding-right: 2%;;
+    padding-right: 5px;
 }
 
 .alignIcon{
+    width: 100%;
     display: flex;
     align-items: center;
 }
 
 .alignIcon > i{
     color: #FF8300;
-    padding-right: 2%;
+    padding-right: 5px;
+}
+.alignIconCenter{
+    justify-content: center;
 }
 
 .ArticleFlexStart .alignIcon{
@@ -188,22 +210,16 @@ aside > i{
     width: 100%;
 }
 .ArticleFlexStart .alignIcon > i{
-    padding-right: 1%;
+    padding-right: 5px;
+}
+
+.ArticleFlexStart #HireMe{
+    align-self: center;
 }
 
 
 
-#HireMe{
-    background-color: #FF8300;
-    color: whitesmoke;
-    border-radius: 20px;
-    border: none;
-    padding: 2%;
-    font-weight: bold;
-}
-#HireMe:hover{
-    box-shadow: 2px 2px #9c5100;
-}
+
 .smallHeaderIntro{
     font-size: 0.8em;
 }
@@ -226,11 +242,13 @@ iframe{
     padding: 0;
     background-color: #bdbdbd;
     border-radius: 20px;
+    transition: 250ms ease-in;
 }
 #GalaxyInvaders{
     background: url("Images/GalaxyInvaders.png") no-repeat round ;
 }
 .ProjectShowcase:hover{
+
     box-shadow: 10px 10px 2px #FF8300 ;
 }
 
@@ -285,6 +303,7 @@ td th{
     min-width: 400px;
     margin: 2% 0 2% 0;
     padding: 0;
+    flex-basis: 100px;
 }
 .ArticleFlexStart p{
 
@@ -323,12 +342,16 @@ form {
     flex-direction: column;
     border: #FF8300 solid 2px;
     padding: 2%;
-
+    transition: 250ms ease-in;
 }
 
 
 form input[type="submit"]:hover{
     box-shadow: 2px 2px #9c5100;
+}
+form input[type="submit"]{
+    transition: 250ms ease-in;
+    cursor: pointer;
 }
 
 
@@ -377,4 +400,73 @@ form input[type="submit"]{
     flex-shrink: 0;
     font-size: 1.3em;
 
+}
+a{
+    position: relative;
+}
+
+[href="https://finki.ukim.mk/"]::after, .alignIcon a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #FF8300;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition:     transform 250ms ease-in;
+;
+}
+
+a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+
+#HireMe:hover{
+    box-shadow: 2px 2px #9c5100;
+    border-radius: 20px;
+
+}
+
+#HireMe{
+    background-color: #FF8300;
+    color: whitesmoke;
+    border-radius: 20px;
+    border: none;
+    padding: 2%;
+    margin-top: 2%;
+    font-weight: bold;
+    z-index: 1;
+    position: relative;
+    transition: 250ms ease-in;
+}
+
+.flexContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+.flexContainer div{
+    flex-basis: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+
+}
+.flexContainer img{
+    width: 4.5em;
+}
+
+.languageSwap{
+   width: 200px;
 }
