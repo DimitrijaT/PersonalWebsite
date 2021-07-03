@@ -1,505 +1,247 @@
-
-/*
-font-family: 'Nunito', sans-serif;
-font-family: 'Open Sans', sans-serif;
- */
-
-html, body {
-    max-width: 100%;
+#gridContainer{
+display: grid;
+    grid-template-areas:
+    'header'
+    'game'
+    'footer';
+gap: 0;
 }
 
 body{
     margin: 0;
-    display: grid;
-    grid-template-areas:
-"header"
-"main"
-"section"
-"footer";
-
+    padding: 0;
 }
 
-html {
-    overflow-y: scroll;
-}
-
-*{
-
-    box-sizing: border-box;
-}
 
 header{
-    font-family: 'Nunito', sans-serif;
-    grid-area: header;
+    background-color: mediumpurple;
+    background-image: linear-gradient(mediumpurple, #6f49b6);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    background-image: linear-gradient(rgba(255, 255, 255, 1),rgba(255, 255, 255, 1),rgba(255, 255, 255, 1),rgba(255, 255, 255, 1), rgba(255, 131, 0, 0.3));
-    flex-wrap: wrap;
-    box-shadow: 0 2px #FF8300;
-    z-index: 999;
-}
-header h1{
-    transition: 250ms ease-in;
-}
-
-
-header h1:hover{
-    text-shadow: 2px 2px 3px #FF8300;
-    color: black;
-}
-
-
-nav > a:not(.languageSwap){
-    border: solid 2px lightgray;
-    color: black;
-    padding: 1%;
-    margin: 1%;
-    border-radius: 20px;
-    transition: 250ms ease-in;
-}
-nav > a:not(.languageSwap):hover{
-    background-color: whitesmoke;
-
-}
-
-
-a {
-
-    text-decoration: none;
-    color: black;
-}
-
-
-section{
-    background-color: white;
-    grid-area: section;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-
-}
-figcaption{
-    background-color: rgba(255, 255, 255, .15);
-    backdrop-filter: blur(5px);
-    padding: 2%;
-    border-radius: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
-}
-figcaption a,h1,button{
-    margin: 0;
-}
-figcaption button{
-    margin-top: 3%;
-}
-
-figure{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-}
-figure > img{
-    min-width: 220px;
-    width: 30%;
-}
-
-article{
-    flex-grow: 1;
+    grid-area: header;
+    height: auto;
+    font-size: 2em;
+    font-weight: bold;
     font-family: 'Open Sans', sans-serif;
-    margin: 3%;
-    flex-basis: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
-
-
-.projectBox{
-    align-items: center;
-    margin: 2%;
-}
-
-
-
-#MainArticle{
-    margin: 0;
-    background: whitesmoke url("Images/Background.png") fixed no-repeat ;
-    background-size: 100%;
-    grid-area: main;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    font-family: 'Nunito', sans-serif;
-}
-
-
-footer{
-    font-family: 'Nunito', sans-serif;
-    background-image: linear-gradient( rgba(255, 131, 0, 0.3), rgba(255, 255, 255, 1),rgba(255, 255, 255, 1),rgba(255, 255, 255, 1),rgba(255, 255, 255, 1));
-    box-shadow: 0 -2px #FF8300;
-    grid-area: footer;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-nav{
-    flex-basis: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-}
-
-#Selected{
-    color: #FF8300;
-    border: solid 2px #FF8300;
-}
-
-h1,h2{
-    font-family: 'Nunito', sans-serif;
-}
-
 aside{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-basis: 400px;
-    user-select: none;
+    padding-left: 20px;
+    font-family: 'VT323', monospace;
 
 }
-
-.languageSwap{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-basis: 400px;
-    user-select: none;
-    padding-right: 5px;
-
-}
-.languageSwap > i{
-    color: #FF8300;
+aside > h1{
+    padding-left: 20px;
+    letter-spacing: 2px;
+    font-family: 'VT323', monospace;
 }
 
 
-
-aside > i{
-    color: #FF8300;
-    padding-right: 5px;
-}
-
-.alignIcon{
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.alignIcon > i{
-    color: #FF8300;
-    padding-right: 5px;
-}
-.alignIconCenter{
-    justify-content: center;
-}
-
-.ArticleFlexStart .alignIcon{
-    flex-grow: 1;
-    justify-content: flex-start;
-    width: 100%;
-}
-.ArticleFlexStart .alignIcon > i{
-    padding-right: 5px;
-}
-
-.ArticleFlexStart #HireMe{
-    align-self: center;
-}
-
-
-
-
-.smallHeaderIntro{
-    font-size: 0.8em;
-}
-
-iframe{
-   pointer-events: none;
-    user-select: none;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.ProjectShowcase{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 350px;
-    height: 350px;
-    margin: 0;
+.ScoreBoard{
     padding: 0;
-    background-color: #bdbdbd;
+    flex-basis: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: center;
+}
+.ScoreBoard h1{
+    font-size: 1.3em;
+}
+
+
+dl dt{
+    text-align: center;
+}
+dl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header h1,img,sub{
+    margin: 0;
+    color: #96ff00;
+    text-align: center;
+
+}
+
+nav a{
+    display: inline-block;
+    text-decoration: none;
+    border: 3px solid #5a008d;
+    background-color: green;
+    color: #EDF5E1;
+    padding: 3px;
+    margin: 5px 5px 5px 5px;
+    border-radius:  15px;
+    text-align: center;
+    user-select: none;
+    flex-basis: 0;
+    flex-grow: 1;
+    font-size: 0.5em;
+}
+
+nav a:hover{
+    background-color: #00ff28;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 450px;
+
+
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    background-color: #200054;
+    background-image: linear-gradient(#200054, #4c00ff);
+    grid-area: game;
+    min-height: 88.6vh;
+}
+
+#GamePage{
+    flex-direction: row;
+}
+
+
+.MainMenu{
+    margin: 1%;
+    min-height: 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-self: center;
+    justify-content: center;
+    padding: 2% 0 2% 0;
+    font-size: 1.5em;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    height: 5vh;
+    background-color: darkmagenta;
+    background-image: linear-gradient( #ce00ce, darkmagenta);
+    grid-area: footer;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+
+#canvas{
+    flex-shrink: 1;
+    flex-basis: 500px;
+    max-width: 500px;
+    min-width: 100px;
+    height: 500px;
+    margin: 3%;
+    align-self: center;
+    border: 3px dashed black;
+    background: url("SiteImages/GalaxyInvaders.png") #8d50ff round;
+}
+
+.MainMenu > button{
+    display: block;
+    border-radius: 5px;
+    background-color: green;
+    color: #EDF5E1;
+    border: none;
+    margin: 1%;
+    padding: 6%;
+    min-width: 300px;
+    font-size: 1.2em;
+}
+
+.Etext, .Mtext, .Htext{
+    user-select: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 1%;
+
+}
+#Easy, .Etext{
+    background-color: green;
+}
+
+
+#Medium, .Mtext{
+    background-color: #ffa200;
+}
+#Hard, .Htext{
+    background-color: #ff5100;
+}
+#FullScreen{
+    background-color: gray;
+}
+#Continue , #PauseResume{
+    display: none;
+}
+
+.LoadGameImages > img{
+    display: none;
+}
+
+article{
+    min-width: 300px;
+    margin: 2%;
+    background-color: #5CDB95;
+    color: #EDF5E1;
     border-radius: 20px;
-    transition: 250ms ease-in;
-}
-#GalaxyInvaders{
-    background: url("Images/GalaxyInvaders.png") no-repeat round ;
-}
-.ProjectShowcase:hover{
-
-    box-shadow: 10px 10px 2px #FF8300 ;
+    padding: 2% 5% 2% 5%;
+    font-size: 1.5em;
+    max-width: 600px;
+    font-family: 'VT323', monospace;
 }
 
-table, td,th,tr{
-
-    border-collapse: collapse;
-    border-top: solid 2px black;
-    border-bottom: solid 2px black;
-    font-size: 0.95em;
-
-}
-table {
-    margin-top: 2%;
-    table-layout: fixed ;
-    width: 100% ;
-}
-td th{
-    width: 25% ;
-}
-td{
+article p , h1 , h2{
     text-align: center;
 }
 
-
-.blurBackground{
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(5px);
-    color: black;
-    padding: 1% 3% 1% 3%;
-    margin: 1% 3% 1% 3%;
-    border-radius: 20px;
-}
-#MainTitle{
-    margin: 0;
-    background: whitesmoke url("Images/Background2.png")  round no-repeat ;
-    background-size: 100%;
-    grid-area: main;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    font-family: 'Nunito', sans-serif;
+article > h1{
+    font-size: 1.4em;
 }
 
-.CVsection{
-    flex-direction: column;
-    align-items: center;
-
+button:hover{
+    box-shadow: 5px 5px #5309ff !important;
 }
 
-.ArticleFlexStart{
-    align-items: flex-start;
-    width: 60%;
-    min-width: 400px;
-    margin: 2% 0 2% 0;
-    padding: 0;
-    flex-basis: 100px;
-}
-.ArticleFlexStart p{
-
-    margin: 0.2%;
-
-}
-
-.ArticleFlexStart h1{
-    border-bottom: black 1px solid;
-    color: #FF8300;
-    align-self: center;
-
-}
-
-
-
-
-
-
-#ContactSection{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-textarea{
-    resize: vertical;
-}
-form {
-    background-color: #fdfdfd;
-    margin-top: 5%;
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    border: #FF8300 solid 2px;
-    padding: 2%;
-    transition: 250ms ease-in;
-}
-
-
-form input[type="submit"]:hover{
-    box-shadow: 2px 2px #9c5100;
-}
-form input[type="submit"]{
-    transition: 250ms ease-in;
-    cursor: pointer;
-}
-
-
-.LeftForm{
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    align-items: stretch;
-    align-content: stretch;
-    width: 50%;
-}
-
-.labelWidth{
-    display: block;
-    width: 100%;
-}
-
-input:not([type="radio"]),select,textarea{
-    display: block;
-    padding: 5px;
-    width: 200%;
-}
-textarea{
-    width: 100%;
-}
-
-input[type="radio"]{
-    padding: 5px;
-}
-form, label,textarea,option,[type="text"] , select{
-    font-size: 1.1em;
+#AboutMainArticle{
+    font-size: 1.3em;
     font-family: 'Open Sans', sans-serif;
 }
-form input[type="submit"]{
 
-    border-radius: 20px;
-    background-color: #FF8300;
-    border: none;
-    color: whitesmoke;
-    align-self: center;
-    padding: 2%;
-    margin: 2%;
-    width: 15%;
-    min-width: 150px;
-    font-weight: bold;
-    flex-shrink: 0;
-    font-size: 1.3em;
 
-}
-a{
-    position: relative;
+
+/* HIDE SCROLLBAR BUT RETAIN FUNCTIONALITY
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
-
-
-[href="https://finki.ukim.mk/"]::after, .alignIcon a::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: #FF8300;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition:     transform 250ms ease-in;
-;
+ Hide scrollbar for IE, Edge and Firefox
+body {
+    -ms-overflow-style: none;   IE and Edge
+    scrollbar-width: none;   Firefox
 }
-
-a:hover::after{
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-
-
-#HireMe:hover{
-    box-shadow: 2px 2px #9c5100;
-    border-radius: 20px;
-
-}
-
-#HireMe{
-    background-color: #FF8300;
-    color: whitesmoke;
-    border-radius: 20px;
-    border: none;
-    padding: 2%;
-    margin-top: 2%;
-    font-weight: bold;
-    z-index: 1;
-    position: relative;
-    transition: 250ms ease-in;
-}
-
-.flexContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-
-}
-.flexContainer div{
-    flex-basis: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 2%;
-
-}
-.flexContainer img{
-    width: 4.5em;
-}
-
-.languageSwap{
-   width: 200px;
-}
-
-@media only screen and (max-width: 600px) {
-    .languageSwap span{
-        display: none;
-    }
-    .languageSwap{
-        flex-basis: 50px;
-    }
-    table ,td ,th, tr{
-        font-size: 0.9em;
-    }
-    .alignIconCenter{
-        justify-content: flex-start;
-    }
-    form, label, textarea, option, [type="text"], select {
-     font-size: 1.05em;
-    }
-}
+*/
