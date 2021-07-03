@@ -116,6 +116,11 @@ article{
 }
 
 
+.projectBox{
+    align-items: center;
+    margin: 2%;
+}
+
 
 
 #MainArticle{
@@ -185,6 +190,7 @@ aside{
 }
 
 
+
 aside > i{
     color: #FF8300;
     padding-right: 5px;
@@ -236,8 +242,8 @@ iframe{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     margin: 0;
     padding: 0;
     background-color: #bdbdbd;
@@ -267,6 +273,9 @@ table {
 }
 td th{
     width: 25% ;
+}
+td{
+    text-align: center;
 }
 
 
@@ -405,6 +414,8 @@ a{
     position: relative;
 }
 
+
+
 [href="https://finki.ukim.mk/"]::after, .alignIcon a::after{
     content: "";
     position: absolute;
@@ -469,4 +480,22 @@ a:hover::after{
 
 .languageSwap{
    width: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+    .languageSwap span{
+        display: none;
+    }
+    .languageSwap{
+        flex-basis: 50px;
+    }
+    table ,td ,th, tr{
+        font-size: 0.9em;
+    }
+    .alignIconCenter{
+        justify-content: flex-start;
+    }
+    form, label, textarea, option, [type="text"], select {
+     font-size: 1.05em;
+    }
 }
