@@ -4,6 +4,10 @@ font-family: 'Nunito', sans-serif;
 font-family: 'Open Sans', sans-serif;
  */
 
+html, body {
+    max-width: 100%;
+}
+
 body{
     margin: 0;
     display: grid;
