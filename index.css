@@ -19,9 +19,11 @@ body{
 
 }
 
+
 html {
     overflow-y: scroll;
 }
+
 
 *{
 
@@ -43,7 +45,6 @@ header h1{
     transition: 250ms ease-in;
 }
 
-
 header h1:hover{
     text-shadow: 2px 2px 3px #FF8300;
     color: black;
@@ -63,7 +64,6 @@ nav > a:not(.languageSwap):hover{
 
 }
 
-
 a {
 
     text-decoration: none;
@@ -78,8 +78,8 @@ section{
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
-
 }
+
 figcaption{
     background-color: rgba(255, 255, 255, .15);
     backdrop-filter: blur(5px);
@@ -158,8 +158,6 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
 
 #Selected{
@@ -421,8 +419,6 @@ form input[type="submit"]{
 a{
     position: relative;
 }
-
-
 
 [href="https://finki.ukim.mk/"]::after, .alignIcon a::after{
     content: "";
