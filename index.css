@@ -1,4 +1,3 @@
-
 /*
 font-family: 'Nunito', sans-serif;
 font-family: 'Open Sans', sans-serif;
@@ -8,7 +7,7 @@ html, body {
     max-width: 100%;
 }
 
-body{
+body {
     margin: 0;
     display: grid;
     grid-template-areas:
@@ -25,33 +24,38 @@ html {
 }
 
 
-*{
+* {
 
     box-sizing: border-box;
 }
 
-header{
+header {
     font-family: 'Nunito', sans-serif;
     grid-area: header;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-image: linear-gradient(rgba(255, 255, 255, 1),rgba(255, 255, 255, 1),rgba(255, 255, 255, 1),rgba(255, 255, 255, 1), rgba(255, 131, 0, 0.3));
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 131, 0, 0.3));
     flex-wrap: wrap;
     box-shadow: 0 2px #FF8300;
     z-index: 999;
 }
-header h1{
+
+header h1 {
     transition: 250ms ease-in;
 }
 
-header h1:hover{
-    text-shadow: 2px 2px 3px #FF8300;
+header h1:hover {
+    text-shadow: 2px 2px 0px #FF8300;
     color: black;
 }
 
 
-nav > a:not(.languageSwap){
+.centerP{
+    text-align: center;
+}
+
+nav > a:not(.languageSwap) {
     border: solid 2px lightgray;
     color: black;
     padding: 1%;
@@ -59,7 +63,8 @@ nav > a:not(.languageSwap){
     border-radius: 20px;
     transition: 250ms ease-in;
 }
-nav > a:not(.languageSwap):hover{
+
+nav > a:not(.languageSwap):hover {
     background-color: whitesmoke;
 
 }
@@ -71,7 +76,7 @@ a {
 }
 
 
-section{
+section {
     background-color: white;
     grid-area: section;
     display: flex;
@@ -80,7 +85,7 @@ section{
     align-items: flex-start;
 }
 
-figcaption{
+figcaption {
     background-color: rgba(255, 255, 255, .15);
     backdrop-filter: blur(5px);
     padding: 2%;
@@ -91,25 +96,28 @@ figcaption{
     align-items: flex-start;
     justify-content: space-evenly;
 }
-figcaption a,h1,button{
+
+figcaption a, h1, button {
     margin: 0;
 }
-figcaption button{
+
+figcaption button {
     margin-top: 3%;
 }
 
-figure{
+figure {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
 }
-figure > img{
+
+figure > img {
     min-width: 220px;
     width: 30%;
 }
 
-article{
+article {
     flex-grow: 1;
     font-family: 'Open Sans', sans-serif;
     margin: 3%;
@@ -120,16 +128,15 @@ article{
 }
 
 
-.projectBox{
+.projectBox {
     align-items: center;
     margin: 2%;
 }
 
 
-
-#MainArticle{
+#MainArticle {
     margin: 0;
-    background: whitesmoke url("Images/Background.png") fixed no-repeat ;
+    background: whitesmoke url("Images/Background.png") fixed no-repeat;
     background-size: 100%;
     grid-area: main;
     display: flex;
@@ -141,9 +148,9 @@ article{
 }
 
 
-footer{
+footer {
     font-family: 'Nunito', sans-serif;
-    background-image: linear-gradient( rgba(255, 131, 0, 0.3), rgba(255, 255, 255, 1),rgba(255, 255, 255, 1),rgba(255, 255, 255, 1),rgba(255, 255, 255, 1));
+    background-image: linear-gradient(rgba(255, 131, 0, 0.3), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
     box-shadow: 0 -2px #FF8300;
     grid-area: footer;
     text-align: center;
@@ -153,32 +160,31 @@ footer{
 }
 
 
-nav{
+nav {
     flex-basis: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#Selected{
+#Selected {
     color: #FF8300;
     border: solid 2px #FF8300;
 }
 
-h1,h2{
+h1, h2 {
     font-family: 'Nunito', sans-serif;
 }
 
-aside{
+aside {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-basis: 400px;
     user-select: none;
-
 }
 
-.languageSwap{
+.languageSwap {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,64 +193,64 @@ aside{
     padding-right: 5px;
 
 }
-.languageSwap > i{
+
+.languageSwap > i {
     color: #FF8300;
 }
 
 
-
-aside > i{
+aside > i {
     color: #FF8300;
     padding-right: 5px;
 }
 
-.alignIcon{
+.alignIcon {
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-.alignIcon > i{
+.alignIcon > i {
     color: #FF8300;
     padding-right: 5px;
 }
-.alignIconCenter{
+
+.alignIconCenter {
     justify-content: center;
 }
 
-.ArticleFlexStart .alignIcon{
+.ArticleFlexStart .alignIcon {
     flex-grow: 1;
     justify-content: flex-start;
     width: 100%;
 }
-.ArticleFlexStart .alignIcon > i{
+
+.ArticleFlexStart .alignIcon > i {
     padding-right: 5px;
 }
 
-.ArticleFlexStart #HireMe{
+.ArticleFlexStart #HireMe {
     align-self: center;
 }
 
-.ArticleFlexStart strong{
+.ArticleFlexStart strong {
     margin-right: 2px;
 }
 
 
-
-
-.smallHeaderIntro{
+.smallHeaderIntro {
     font-size: 0.8em;
 }
 
-iframe{
-   pointer-events: none;
+iframe {
+    pointer-events: none;
     user-select: none;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.ProjectShowcase{
+.ProjectShowcase {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -256,15 +262,33 @@ iframe{
     border-radius: 20px;
     transition: 250ms ease-in;
 }
-#GalaxyInvaders{
-    background: url("Images/GalaxyInvaders.png") no-repeat round ;
-}
-.ProjectShowcase:hover{
 
-    box-shadow: 10px 10px 2px #FF8300 ;
+#GalaxyInvaders {
+    border-style: solid;
+    border-color: #353535;
+    background: url("Images/GalaxyInvaders.png") no-repeat round;
 }
 
-table, td,th,tr{
+#UrbanNest {
+    border-style: solid;
+    border-color: #353535;
+    background: url("Images/UrbanNest.png") no-repeat round;
+}
+
+#MKLearner {
+    border-style: solid;
+    border-color: #353535;
+    background: url("Images/MKLearner.png") no-repeat round;
+}
+
+
+.ProjectShowcase:hover {
+
+    box-shadow: 10px 10px 2px #FF8300;
+}
+
+
+table, td, th, tr {
 
     border-collapse: collapse;
     border-top: solid 2px black;
@@ -272,20 +296,23 @@ table, td,th,tr{
     font-size: 0.95em;
 
 }
+
 table {
     margin-top: 2%;
-    table-layout: fixed ;
-    width: 100% ;
+    table-layout: fixed;
+    width: 100%;
 }
-td th{
-    width: 25% ;
+
+td th {
+    width: 25%;
 }
-td{
+
+td {
     text-align: center;
 }
 
 
-.blurBackground{
+.blurBackground {
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
     color: black;
@@ -293,9 +320,10 @@ td{
     margin: 1% 3% 1% 3%;
     border-radius: 20px;
 }
-#MainTitle{
+
+#MainTitle {
     margin: 0;
-    background: whitesmoke url("Images/Background2.png")  round no-repeat ;
+    background: whitesmoke url("Images/Background2.png") round no-repeat;
     background-size: 100%;
     grid-area: main;
     display: flex;
@@ -306,13 +334,13 @@ td{
     font-family: 'Nunito', sans-serif;
 }
 
-.CVsection{
+.CVsection {
     flex-direction: column;
     align-items: center;
 
 }
 
-.ArticleFlexStart{
+.ArticleFlexStart {
     align-items: flex-start;
     width: 60%;
     min-width: 400px;
@@ -320,34 +348,31 @@ td{
     padding: 0;
     flex-basis: 100px;
 }
-.ArticleFlexStart p{
+
+.ArticleFlexStart p {
 
     margin: 0.2%;
 
 }
 
-.ArticleFlexStart h1{
+.ArticleFlexStart h1 {
     border-bottom: black 1px solid;
     color: #FF8300;
     align-self: center;
-
 }
 
 
-
-
-
-
-#ContactSection{
+#ContactSection {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
 }
 
-textarea{
+textarea {
     resize: vertical;
 }
+
 form {
     background-color: #fdfdfd;
     margin-top: 5%;
@@ -356,21 +381,23 @@ form {
     flex-wrap: wrap;
     flex-direction: column;
     border: #FF8300 solid 2px;
+    border-radius: 20px;
     padding: 2%;
     transition: 250ms ease-in;
 }
 
 
-form input[type="submit"]:hover{
+form input[type="submit"]:hover {
     box-shadow: 2px 2px #9c5100;
 }
-form input[type="submit"]{
+
+form input[type="submit"] {
     transition: 250ms ease-in;
     cursor: pointer;
 }
 
 
-.LeftForm{
+.LeftForm {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
@@ -379,28 +406,31 @@ form input[type="submit"]{
     width: 50%;
 }
 
-.labelWidth{
+.labelWidth {
     display: block;
     width: 100%;
 }
 
-input:not([type="radio"]),select,textarea{
+input:not([type="radio"]), select, textarea {
     display: block;
     padding: 5px;
     width: 200%;
 }
-textarea{
+
+textarea {
     width: 100%;
 }
 
-input[type="radio"]{
+input[type="radio"] {
     padding: 5px;
 }
-form, label,textarea,option,[type="text"] , select{
+
+form, label, textarea, option, [type="text"], select {
     font-size: 1.1em;
     font-family: 'Open Sans', sans-serif;
 }
-form input[type="submit"]{
+
+form input[type="submit"] {
 
     border-radius: 20px;
     background-color: #FF8300;
@@ -416,11 +446,12 @@ form input[type="submit"]{
     font-size: 1.3em;
 
 }
-a{
+
+a {
     position: relative;
 }
 
-[href="https://finki.ukim.mk/"]::after, .alignIcon a::after{
+[href="https://finki.ukim.mk/"]::after, .alignIcon a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -430,24 +461,22 @@ a{
     background: #FF8300;
     transform: scaleX(0);
     transform-origin: right;
-    transition:     transform 250ms ease-in;
-;
+    transition: transform 250ms ease-in;;
 }
 
-a:hover::after{
+a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
 }
 
 
-
-#HireMe:hover{
+#HireMe:hover {
     box-shadow: 2px 2px #9c5100;
     border-radius: 20px;
 
 }
 
-#HireMe{
+#HireMe {
     background-color: #FF8300;
     color: whitesmoke;
     border-radius: 20px;
@@ -460,7 +489,7 @@ a:hover::after{
     transition: 250ms ease-in;
 }
 
-.flexContainer{
+.flexContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -469,7 +498,8 @@ a:hover::after{
     width: 100%;
 
 }
-.flexContainer div{
+
+.flexContainer div {
     flex-basis: 300px;
     display: flex;
     align-items: center;
@@ -478,28 +508,33 @@ a:hover::after{
     margin-bottom: 2%;
 
 }
-.flexContainer img{
+
+.flexContainer img {
     width: 4.5em;
 }
 
-.languageSwap{
-   width: 200px;
+.languageSwap {
+    width: 200px;
 }
 
 @media only screen and (max-width: 600px) {
-    .languageSwap span{
+    .languageSwap span {
         display: none;
     }
-    .languageSwap{
+
+    .languageSwap {
         flex-basis: 50px;
     }
-    table ,td ,th, tr{
+
+    table, td, th, tr {
         font-size: 0.9em;
     }
-    .alignIconCenter{
+
+    .alignIconCenter {
         justify-content: flex-start;
     }
+
     form, label, textarea, option, [type="text"], select {
-     font-size: 1.05em;
+        font-size: 1.05em;
     }
 }
